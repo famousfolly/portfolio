@@ -1,0 +1,163 @@
+/* General styling. */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Tahoma, sans-serif;
+}
+header, #header-container, nav, div#content, footer {
+  width: 65%;
+  margin: auto;
+}
+div#container {
+  width: 100%;
+}
+h1, h2 {
+  letter-spacing: 5px;
+  text-align: center;
+  margin: auto;
+  padding: 5px;
+}
+h1 {
+  font-size: 1.5em;
+}
+h2 {
+  font-size: 1.2em;
+}
+span {
+  font-weight: bold;
+}
+p {
+  margin: 10px;
+}
+th {
+  width: 170px;
+  padding: 5px;
+  font-weight: normal;
+}
+td {
+  padding: 2px;
+}
+
+/* Header styling. */
+header {
+  text-align: center;
+}
+#header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  list-style: none;
+  align-items: center;
+  flex-wrap: wrap;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+}
+.header-item {
+  width: 150px;
+  height: 50px;
+  margin: 10px 0px;
+  text-align: center;
+  line-height: 50px;
+  white-space: nowrap;
+}
+.header-item a {
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+/* Nav & banner styling. */
+#banner {
+  width: 100%;
+  height: 350px;
+  position: relative;
+}
+#index-welcome {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+#index-welcome h1 {
+  padding: 20px;
+  text-transform: uppercase;
+  font-size: 2em;
+}
+
+/* Content styling. */
+#content {
+  padding: 10px;
+}
+#content h1, h2 {
+  text-transform: lowercase;
+}
+#content h1 {
+  width: 50%;
+}
+#content h2 {
+  width: 65%;
+}
+#container {
+  padding: 10px;
+  margin: 10px 0px;
+}
+div#content a {
+  text-decoration: none;
+  font-weight: bold;
+}
+div#content a:hover {
+  text-decoration: underline;
+}
+div#container h2 {
+  margin-bottom: 5px;
+}
+#pile-nav-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+.pile-button {
+  height: 70px;
+  width: 100px;
+  margin: 5px;
+  line-height: 70px;
+}
+
+/* Footer styling. */
+footer {
+  text-align: center;
+  padding: 10px;
+}
+#footer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  list-style: none;
+  align-items: flex-start;
+  width: 100%;
+}
+.footer-item {
+  padding: 10px 15px;
+}
+.footer-item a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: bold;
+}
+.footer-item a:hover {
+  text-decoration: underline;
+}
+footer p {
+  margin: 10px;
+}
+
+@media (max-width: 800px) {
+  header, nav, div, footer, div#content {
+    width: 100%;
+  }
+  .header-item {
+    width: 30%;
+  }
+}
