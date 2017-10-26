@@ -5,12 +5,8 @@
   box-sizing: border-box;
   font-family: Tahoma, sans-serif;
 }
-header, #header-container, nav, div#content, footer {
-  width: 65%;
-  margin: auto;
-}
 div#container {
-  width: 100%;
+  width: 65%;
 }
 h1, h2 {
   letter-spacing: 5px;
@@ -43,29 +39,29 @@ td {
 header {
   text-align: center;
 }
-#header-container {
+#nav-container {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   list-style: none;
   align-items: center;
   flex-wrap: wrap;
   position: fixed;
   top: 0;
   z-index: 3;
+  width: 100%;
 }
-.header-item {
-  width: 150px;
-  height: 50px;
-  margin: 10px 0px;
-  text-align: center;
-  line-height: 50px;
-  white-space: nowrap;
-}
-.header-item a {
+#nav-container a {
+  margin: 1em 0.5em;
+  padding: 15px 20px;
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 2px;
+}
+#home-button {
+  font-weight: bold;
+  font-style: italic;
+  font-size: 1.2em;
 }
 
 /* Nav & banner styling. */
@@ -73,6 +69,9 @@ header {
   width: 100%;
   height: 350px;
   position: relative;
+  background: url(banner.png);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 #index-welcome {
   position: absolute;
@@ -81,8 +80,9 @@ header {
 }
 #index-welcome h1 {
   padding: 20px;
-  text-transform: uppercase;
+  text-transform: lowercase;
   font-size: 2em;
+  font-style: italic;
 }
 
 /* Content styling. */
@@ -100,7 +100,7 @@ header {
 }
 #container {
   padding: 10px;
-  margin: 10px 0px;
+  margin: 10px auto;
 }
 div#content a {
   text-decoration: none;
@@ -157,7 +157,34 @@ footer p {
   header, nav, div, footer, div#content {
     width: 100%;
   }
-  .header-item {
+  #nav-container a {
     width: 30%;
   }
+}
+
+/* Theme and colors */
+/* white */
+h1, h2, #nav-container a, .nav-item a, .pile-button a, .nav-item, #tcg-name, footer, .footer-item a {
+  color: white;
+}
+
+/* red: rgb(122, 0, 17) */
+span, div#content a, div#content a:hover {
+  color: rgb(122, 0, 17);
+}
+header, h1, #nav-container, footer {
+  background-color: rgb(122, 0, 17);
+}
+
+/* palebrown: rgb(196, 175, 140) */
+.nav-button, .nav-item, .pile-button {
+  background-color: rgb(196, 175, 140);
+}
+
+/* green: rgb(164, 167, 61) */
+h2, #nav-container a:hover, .nav-item:hover, #home-button {
+  background-color: rgb(164, 167, 61);
+}
+#index-welcome h1 {
+  background: rgba(164, 167, 61, 0.8);
 }
